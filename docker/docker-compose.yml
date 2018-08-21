@@ -1,0 +1,8 @@
+version: '3'
+services:
+  node:
+    image: node:latest
+    tty: true
+    volumes:
+      - '../:/usr/src'
+    working_dir: '/usr/src'
