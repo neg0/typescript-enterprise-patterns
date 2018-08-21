@@ -1,22 +1,23 @@
 {
-  "name": "trails",
+  "name": "etp",
   "version": "0.0.1",
-  "description": "trtails demo ",
+  "description": "Commonly used patterns for typescript in enterprise applications",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "ts-node": "ts-node"
+    "test": "karma start karma.conf.js"
   },
   "keywords": [
     "trails"
   ],
   "author": "hadi",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/jasmine": "^2.8.8",
     "@types/node": "^10.7.1",
     "jasmine": "^3.2.0",
     "karma": "^3.0.0",
+    "karma-jasmine": "^1.1.2",
+    "karma-phantomjs-launcher": "^1.0.4",
     "karma-typescript": "^3.0.13",
     "prettier": "^1.14.2",
     "ts-node": "^7.0.1",
