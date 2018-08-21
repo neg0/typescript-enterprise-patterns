@@ -1,9 +1,10 @@
 import { UserFactory } from "./UserFactory";
-import { UserTypes } from "./UserTypes";
+import { UserType } from "./UserType";
 import { Guest } from "./Guest";
 import { Member } from "./Member";
 import { Manager } from "./Manager";
 import { User } from "./User";
+import { Error } from "tslint/lib/error";
 
 fdescribe("Testing User Factory", () => {
   let sut: UserFactory;
@@ -38,8 +39,9 @@ fdescribe("Testing User Factory", () => {
     let guestUser: User;
 
     beforeEach(() => {
-      guestUser = sut.create(UserTypes.GUEST);
+      guestUser = sut.create(UserType.GUEST);
     });
+
     it("should create Guest User", () => {
       expect(guestUser instanceof Guest).toBe(true);
     });
@@ -49,8 +51,9 @@ fdescribe("Testing User Factory", () => {
     let memberUser: User;
 
     beforeEach(() => {
-      memberUser = sut.create(UserTypes.MEMBER);
+      memberUser = sut.create(UserType.MEMBER);
     });
+
     it("should create Member User", () => {
       expect(memberUser instanceof Member).toBe(true);
     });
@@ -60,8 +63,9 @@ fdescribe("Testing User Factory", () => {
     let managerUser: User;
 
     beforeEach(() => {
-      managerUser = sut.create(UserTypes.MANAGER);
+      managerUser = sut.create(UserType.MANAGER);
     });
+
     it("should create Manager User", () => {
       expect(managerUser instanceof Manager).toBe(true);
     });

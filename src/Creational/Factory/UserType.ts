@@ -1,4 +1,4 @@
-export enum UserTypes {
+export enum UserType {
   GUEST = 'guest',
   MEMBER = 'member',
   MANAGER = 'manager',

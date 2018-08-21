@@ -2,7 +2,7 @@ import { Guest } from "./Guest";
 import { Manager } from "./Manager";
 import { Member } from "./Member";
 import { FactoryInterface } from "./FactoryInterface";
-import { UserTypes } from "./UserTypes";
+import { UserType } from "./UserType";
 import { User } from "./User";
 
 export class UserFactory implements FactoryInterface {
@@ -19,11 +19,11 @@ export class UserFactory implements FactoryInterface {
 
   public create(type: string): User {
     switch (type) {
-      case UserTypes.GUEST:
+      case UserType.GUEST:
         return this.createGuest();
-      case UserTypes.MANAGER:
+      case UserType.MANAGER:
         return this.createManager();
-      case UserTypes.MEMBER:
+      case UserType.MEMBER:
         return this.createMember();
       default:
         throw new Error("Undefined/Unsupported User Type");
