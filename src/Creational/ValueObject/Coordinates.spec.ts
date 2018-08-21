@@ -1,6 +1,6 @@
 import { Coordinates } from "./Coordinates";
 
-fdescribe("Testing Value Object (Coordinates)", () => {
+describe("Testing Value Object (Coordinates)", () => {
   let sut: Coordinates;
   const x = 1;
   const y = 2;
