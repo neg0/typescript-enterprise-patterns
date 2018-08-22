@@ -1,11 +1,11 @@
 export class Coordinates {
-  constructor(private x: number, private y: number) {}
+  constructor(private lat: number, private lng: number) {}
 
-  public get vertical() {
-    return this.x;
+  public get latitude() {
+    return this.lat;
   }
 
-  public get horizontal() {
-    return this.y
+  public get longitude() {
+    return this.lng
   }
 }

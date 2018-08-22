@@ -2,26 +2,26 @@ import { Coordinates } from "./Coordinates";
 
 describe("Testing Value Object (Coordinates)", () => {
   let sut: Coordinates;
-  const x = 1;
-  const y = 2;
+  const lat = 1;
+  const lng = 2;
 
   beforeEach(() => {
-    sut = new Coordinates(x, y);
+    sut = new Coordinates(lat, lng);
   });
 
   afterEach(() => {
     sut = undefined;
   });
 
-  it("should be instantiated", () => {
+  it("should be instantiable", () => {
     expect(sut instanceof Coordinates).toBe(true);
   });
 
-  it("should have position x", function() {
-    expect(sut.vertical).toBe(x);
+  it("should have latitude", function() {
+    expect(sut.latitude).toBe(lat);
   });
 
-  it("should have position y", function() {
-    expect(sut.horizontal).toBe(y);
+  it("should have longitude", function() {
+    expect(sut.longitude).toBe(lng);
   });
 });

@@ -11,7 +11,14 @@ Please enter docker folder and run following:
 $: docker-compose up --build -d
 ```
 
-### Further configuration for dependencies
+### Run Tests
+Whilst inside docker folder, enter the docker container and run the test through npm.
+```bash
+$ docker-compose exec node bash
+$ npm run test
+```
+
+#### Further configuration for dependencies
 * [Configuration for Karma](https://karma-runner.github.io/latest/config/configuration-file.html)
 * [Configuration for Karma-TypeScript](https://github.com/monounity/karma-typescript/blob/master/cookbook.md)
 * [Configuration for Jasmine](https://jasmine.github.io/setup/nodejs.html)

@@ -44,6 +44,7 @@ describe("Testing User Factory", () => {
     it("should create Guest User", () => {
       expect(guestUser instanceof Guest).toBe(true);
     });
+    // todo: maybe extend the test (adding more it) checking properties
   });
 
   describe("should create Member", () => {
@@ -56,6 +57,7 @@ describe("Testing User Factory", () => {
     it("should create Member User", () => {
       expect(memberUser instanceof Member).toBe(true);
     });
+    // todo: maybe extend the test (adding more it) checking properties
   });
 
   describe("should create Manager", () => {
@@ -68,5 +70,12 @@ describe("Testing User Factory", () => {
     it("should create Manager User", () => {
       expect(managerUser instanceof Manager).toBe(true);
     });
+    // todo: maybe extend the test (adding more it) checking properties
+  });
+
+  describe("should not create undefined type of user and throw an error", () => {
+      it("should throw an error", () => {
+          expect(() => { sut.create('NotDefined') }).toThrow(new Error(UserFactory.ERROR_MSG));
+      });
   });
 });

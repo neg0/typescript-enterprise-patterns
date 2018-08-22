@@ -6,6 +6,8 @@ import { UserType } from "./UserType";
 import { User } from "./User";
 
 export class UserFactory implements FactoryInterface {
+  public static ERROR_MSG: string = "Undefined/Unsupported User Type";
+
   constructor(
     public firstName: string,
     public lastName: string,
@@ -21,12 +23,12 @@ export class UserFactory implements FactoryInterface {
     switch (type) {
       case UserType.GUEST:
         return this.createGuest();
+      case UserType.MEMBER:
+          return this.createMember();
       case UserType.MANAGER:
         return this.createManager();
-      case UserType.MEMBER:
-        return this.createMember();
       default:
-        throw new Error("Undefined/Unsupported User Type");
+        throw new Error(UserFactory.ERROR_MSG);
     }
   }
 
