@@ -6,6 +6,6 @@ export class Coordinates {
   }
 
   public get longitude() {
-    return this.lng
+    return this.lng;
   }
 }

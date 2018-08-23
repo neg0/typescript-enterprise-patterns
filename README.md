@@ -7,13 +7,13 @@ Design patterns may be viewed as a structured approach to computer programming i
 
 ## Run using Docker (_docker composer_)
 Please enter docker folder and run following:
-```bash
+```terminal
 $: docker-compose up --build -d
 ```
 
 ### Run Tests
 Whilst inside docker folder, enter the docker container and run the test through npm.
-```bash
+```terminal
 $ docker-compose exec node bash
 $ npm run test
 ```

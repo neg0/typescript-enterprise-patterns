@@ -75,7 +75,7 @@ describe("Testing User Factory", () => {
 
   describe("should not create undefined type of user and throw an error", () => {
       it("should throw an error", () => {
-          expect(() => { sut.create('NotDefined') }).toThrow(new Error(UserFactory.ERROR_MSG));
+          expect(() => { sut.create('NotDefined') }).toThrowError(UserFactory.ERROR_MSG);
       });
   });
 });
