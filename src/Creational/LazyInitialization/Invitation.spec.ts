@@ -6,7 +6,6 @@ describe('Testing Invitation (Lazy Initialisation)', () => {
     it('should add invitee to the object', function () {
         Invitation.getInvitee('Hadi');
         Invitation.getInvitee('John');
-        // expect(Invitation.getAllInvitees()).toContain({count: 2});
-        console.log('hereee', Invitation.getAllInvitees());
+        expect(Invitation.getCount()).toEqual(2);
     });
 });
