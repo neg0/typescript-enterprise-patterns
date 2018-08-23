@@ -1,3 +1,3 @@
 export abstract class Factory {
-    public static create(...args) {}
+  public static create(...args) {}
 }

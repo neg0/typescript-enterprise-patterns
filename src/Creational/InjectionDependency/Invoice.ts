@@ -8,9 +8,9 @@ export class Invoice {
 
   public create(): object {
     return {
-        name: this.user.name,
-        address: this.user.address,
-        total: this.currencySymbol + ' ' + this.amount,
+      name: this.user.name,
+      address: this.user.address,
+      total: this.currencySymbol + " " + this.amount
     };
   }
 }

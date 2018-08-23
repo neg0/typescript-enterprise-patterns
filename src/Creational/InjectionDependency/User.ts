@@ -1,6 +1,3 @@
 export class User {
-    public constructor(
-        public name,
-        public address,
-    ) {}
+  public constructor(public name, public address) {}
 }
