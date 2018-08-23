@@ -1,8 +1,7 @@
-import {ObjectPool} from './ObjectPool';
+import { ObjectPool } from "./ObjectPool";
 
 export class SessionPool extends ObjectPool {
-
-    private constructor() {
-        super();
-    }
+  private constructor() {
+    super();
+  }
 }
