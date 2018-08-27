@@ -6,7 +6,7 @@ export class Invoice {
 
   public constructor(private user: User) {}
 
-  public create(): object {
+  public create(): { name: string, address: string, total: string } {
     return {
       name: this.user.name,
       address: this.user.address,
