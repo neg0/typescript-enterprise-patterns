@@ -4,11 +4,8 @@ export namespace Cache {
 
     private constructor() {}
 
-    static get sharedInstance() {
-      if (Storage.instance) {
-        return Storage.instance;
-      }
-      return (Storage.instance = new Storage());
+    public static sharedInstance() {
+      return Storage.instance ? Storage.instance : Storage.instance = new Storage();
     }
   }
 }

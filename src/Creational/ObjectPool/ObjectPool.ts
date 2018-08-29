@@ -1,11 +1,13 @@
 export abstract class ObjectPool {
   protected static objects = {};
+  private static key: string;
 
   protected constructor() {}
 
   public static push(poolObject: object): void {
-    if (undefined === ObjectPool.objects[Object.getPrototypeOf(poolObject).constructor.name]) {
-      ObjectPool.objects[Object.getPrototypeOf(poolObject).constructor.name] = poolObject;
+    ObjectPool.key = Object.getPrototypeOf(poolObject).constructor.name;
+    if (undefined === ObjectPool.objects[ObjectPool.key]) {
+      ObjectPool.objects[ObjectPool.key] = poolObject;
     }
   }
 
@@ -19,5 +21,9 @@ export abstract class ObjectPool {
     if (undefined !== ObjectPool.objects[identifier]) {
       ObjectPool.objects[identifier] = undefined;
     }
+  }
+
+  public static lastInserted(): string | void {
+    return ObjectPool.key ? ObjectPool.key : undefined;
   }
 }

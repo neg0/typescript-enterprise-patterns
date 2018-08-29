@@ -5,17 +5,10 @@ In software engineering, a software design pattern is a general, reusable soluti
 
 Design patterns may be viewed as a structured approach to computer programming intermediate between the levels of a programming paradigm and a concrete algorithm.
 
-## Run using Docker (_docker composer_)
+## Run Tests using Docker (_docker compose_)
 Please enter docker folder and run following:
 ```terminal
-$: docker-compose up --build -d
-```
-
-### Run Tests
-Whilst inside docker folder, enter the docker container and run the test through npm.
-```terminal
-$ docker-compose exec node bash
-$ npm run test
+$: docker-compose up --build
 ```
 
 #### Further configuration for dependencies
