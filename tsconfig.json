@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+    "module": "commonjs",
+        "esModuleInterop": true,
+        "target": "es2019",
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "outDir": "./dist",
+        "rootDir": "./src",
+        "removeComments": true,
+        "allowJs": true,
+        "types": ["@types/jest"],
+        "baseUrl": "."
+},
+    "include": ["src/**/*"],
+    "exclude": ["node_modules/**/*", "dist/**/*"]
+}

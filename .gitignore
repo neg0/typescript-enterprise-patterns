@@ -1,4 +1,6 @@
-.idea/
-package-lock.json
-node_modules/
-coverage
+### Directories
+/node_modules
+/coverage
+
+### Files
+.env

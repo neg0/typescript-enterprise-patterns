@@ -2,8 +2,9 @@ version: "3"
 services:
   node:
     image: node:latest
+    container_name: typescript-enterprise-patterns
     tty: true
     volumes:
       - "../:/usr/src"
     working_dir: "/usr/src"
-    command: npm run test
+    command: yarn install && yarn test
