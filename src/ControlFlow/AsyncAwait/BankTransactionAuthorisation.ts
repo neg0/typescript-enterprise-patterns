@@ -10,7 +10,7 @@ export class BankTransactionAuthorisation {
     public async handle(): Promise<boolean> {
         try {
             await new ValidateUserAccount(this.isUserValid).handle()
-            await new ValidateTransferAmount(this.isAmountValid,).handle()
+            await new ValidateTransferAmount(this.isAmountValid).handle()
 
             return true
 

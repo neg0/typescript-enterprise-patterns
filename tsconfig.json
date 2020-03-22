@@ -10,7 +10,9 @@
         "rootDir": "./src",
         "removeComments": true,
         "allowJs": true,
-        "types": ["@types/jest"],
+        "typeRoots": [
+            "node_modules/@types"
+        ],
         "baseUrl": "."
 },
     "include": ["src/**/*"],

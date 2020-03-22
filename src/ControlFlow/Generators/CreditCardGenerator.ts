@@ -7,7 +7,7 @@ export default class CreditCardGenerator {
         'American Express',
         'Capital One',
         'Bank of America',
-    ];
+    ]
 
     public *getSupportedCards(): Generator<string> {
         for (const card of CreditCardGenerator.supportedCards) {
