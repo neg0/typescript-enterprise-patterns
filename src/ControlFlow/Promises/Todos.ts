@@ -15,17 +15,33 @@ export default function httpsGet(
         get(url, res => {
             const { headers } = res
             const { statusCode } = res
-            let data = ''
+            let data: Uint8Array[] = []
 
             res.on('data', d => {
-                data += d
+                data.push(d)
             })
 
             res.on('end', () => {
-                resolve(HttpResponse(statusCode, headers, data))
+                resolve(
+                    HttpResponse(
+                        statusCode,
+                        headers,
+                        Buffer.concat(data).toString(),
+                    ),
+                )
             })
         }).on('error', e => {
             reject(e)
         })
     })
+}
+
+export function MultipleCalls(): Promise<any> {
+    return httpsGet('')
+        .then(res => {
+            return httpsGet('')
+        })
+        .then(res => {
+            return httpsGet('')
+        })
 }
