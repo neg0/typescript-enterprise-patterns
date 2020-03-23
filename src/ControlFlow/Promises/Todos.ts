@@ -36,12 +36,32 @@ export default function httpsGet(
     })
 }
 
+/**
+ * Example of positive promise nest to avoid a call back pyramid
+ */
 export function MultipleCalls(): Promise<any> {
-    return httpsGet('')
+    return httpsGet('https://jsonplaceholder.typicode.com/users')
         .then(res => {
-            return httpsGet('')
+            // do sth with result
+            return httpsGet('https://jsonplaceholder.typicode.com/posts')
         })
         .then(res => {
-            return httpsGet('')
+            // do sth with result
+            return httpsGet('https://jsonplaceholder.typicode.com/comments')
+        }).then(res => {
+            // do sth with result
+            return Promise.resolve({})
         })
+}
+
+/**
+ * Using Async/Await Pattern to execute the multiple call promise
+ */
+export async function executeMultipleCalls(): Promise<any> {
+    try {
+        return await MultipleCalls()
+        // ES6+: return Promise.resolve(await MultipleCalls())
+    } catch (e) {
+        console.error(e)
+    }
 }
