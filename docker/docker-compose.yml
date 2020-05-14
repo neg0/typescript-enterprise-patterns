@@ -1,10 +1,10 @@
 version: "3"
 services:
   node:
-    image: node:latest
+    image: node:12-alpine
     container_name: typescript-enterprise-patterns
     tty: true
     volumes:
       - "../:/usr/src"
     working_dir: "/usr/src"
-    command: yarn install && yarn test
+    command: npm i && npm test

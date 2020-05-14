@@ -10,8 +10,3 @@ Please enter docker folder and run following:
 ```terminal
 $: docker-compose up --build
 ```
-
-#### Further configuration for dependencies
-* <a href='https://karma-runner.github.io/latest/config/configuration-file.html'>Configuration for Karma</a>
-* <a href='https://github.com/monounity/karma-typescript/blob/master/cookbook.md'>Configuration for Karma-TypeScript</a>
-* <a href='https://jasmine.github.io/setup/nodejs.html'>Configuration for Jasmine</a>
