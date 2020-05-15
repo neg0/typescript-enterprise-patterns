@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
-    "esModuleInterop": true,
-    "target": "ES2019",
-    "noImplicitAny": true,
-    "moduleResolution": "node",
-    "sourceMap": true,
     "rootDir": ".",
     "outDir": "dist",
+    "module": "CommonJS",
+    "target": "ES2019",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
     "removeComments": true,
     "allowJs": true,
     "typeRoots": ["node_modules/@types"]

@@ -6,7 +6,9 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/eslint-recommended"
+        "plugin:@typescript-eslint/eslint-recommended",
+        "google",
+        "standard"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -14,15 +16,16 @@
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": 2020
+        "ecmaVersion": 2016
     },
     "plugins": [
         "@typescript-eslint"
     ],
     "rules": {
+        "comma-dangle": "off",
         "indent": [
             "error",
-            4
+            2
         ],
         "linebreak-style": [
             "error",
